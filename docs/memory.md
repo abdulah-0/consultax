@@ -4,7 +4,7 @@ This document tracks the current state of the project, features implemented, dec
 
 ## Project Status Overview
 - **Repository Remote:** `https://github.com/abdulah-0/consultax.git`
-- **Current Phase:** Phase 2 (Database Schema & Core APIs) — In Progress
+- **Current Phase:** Phase 3 (Public Marketing Pages) — In Progress
 - **Last Updated:** 20 July 2026
 
 ---
@@ -21,3 +21,9 @@ This document tracks the current state of the project, features implemented, dec
 - **Action:** Created shared `@consultax/db` containing the Prisma schema definitions.
 - **Action:** Scaffolded Next.js projects for public marketing (`/apps/web`) and admin dashboard (`/apps/admin`).
 - **Action:** Verified local development workspaces configuration and successfully built both applications.
+- **Action:** Created `.env.example` configuration template file.
+- **Action:** Installed `bcryptjs` and `jose` authentication dependencies.
+- **Action:** Developed seed script `packages/db/prisma/seed.js` pre-populating FBR service categories, subservices, and admin roles.
+- **Action:** Implemented public `POST /api/leads` route with input verification (PK phones, emails) and in-memory rate limiting.
+- **Action:** Created admin auth endpoints: `/api/auth/login` (issues JWT in HTTP-Only cookie), `/api/auth/logout` (expires session), and `/api/auth/me` (reads profile).
+- **Action:** Completed TypeScript checks and verified full workspace builds.
