@@ -4,7 +4,7 @@ This document tracks the current state of the project, features implemented, dec
 
 ## Project Status Overview
 - **Repository Remote:** `https://github.com/abdulah-0/consultax.git`
-- **Current Phase:** Phase 5 (Admin Dashboard — Authentication & Core Views) — In Progress
+- **Current Phase:** Phase 6 (Admin Dashboard — Administration & Reports) — In Progress
 - **Last Updated:** 20 July 2026
 
 ---
@@ -41,3 +41,12 @@ This document tracks the current state of the project, features implemented, dec
 - **Action:** Created a custom boundary test runner `run-tests.ts` and executed it successfully.
 - **Action:** Developed the tabbed interactive Tax Calculators Page (`/calculators`).
 - **Action:** Linked the calculator CTAs to pass calculated monthly estimates to the contact page form.
+- **Action:** Created admin session check middleware in `apps/admin/middleware.ts`.
+- **Action:** Developed admin portal `/login` interface verifying email/password.
+- **Action:** Implemented global `<AdminLayout>` layout header, sidebar navigation, profile tabs, and badged notifications.
+- **Action:** Built stats API (`/api/leads/stats`) to compute totals, FBR categorizations, and weekly logs.
+- **Action:** Implemented triage queue table API `/api/leads` and detail history logger `/api/leads/[id]`.
+- **Action:** Developed Dashboard Overview page widgets and relative percentage CSS charts.
+- **Action:** Developed Leads Triage screen (`/leads`) filterable lists and overdue flags (>24h since `NEW`).
+- **Action:** Developed Lead Details page (`/leads/[id]`) with chronological logs, status edits, user assignments, and communications triggers.
+- **Action:** Built clean routes for Settings, Reports, Users, and Services, bypassing 404 blocks.
