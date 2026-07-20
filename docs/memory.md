@@ -4,7 +4,7 @@ This document tracks the current state of the project, features implemented, dec
 
 ## Project Status Overview
 - **Repository Remote:** `https://github.com/abdulah-0/consultax.git`
-- **Current Phase:** Phase 3 (Public Marketing Pages) — In Progress
+- **Current Phase:** Phase 4 (Tax Calculators) — In Progress
 - **Last Updated:** 20 July 2026
 
 ---
@@ -27,3 +27,11 @@ This document tracks the current state of the project, features implemented, dec
 - **Action:** Implemented public `POST /api/leads` route with input verification (PK phones, emails) and in-memory rate limiting.
 - **Action:** Created admin auth endpoints: `/api/auth/login` (issues JWT in HTTP-Only cookie), `/api/auth/logout` (expires session), and `/api/auth/me` (reads profile).
 - **Action:** Completed TypeScript checks and verified full workspace builds.
+- **Action:** Copied logo asset to public folders of both applications.
+- **Action:** Created responsive `Navbar` and dynamic `Footer` with dynamic copyright calculations.
+- **Action:** Implemented floating `WhatsAppButton` CTA linking to the firm's direct number.
+- **Action:** Configured Google Fonts (Poppins & Inter) in Next.js App layout.
+- **Action:** Developed all core website pages: Home (`/`), About (`/about`), Services (`/services`), and Contact Us (`/contact`).
+- **Action:** Wired service card CTA actions to pre-fill the contact form dropdown via URL query parameters.
+- **Action:** Developed a success checkmark and WhatsApp redirect confirmation panel after submitting a lead.
+- **Action:** Wrapped parameter readers in a Suspense boundary to ensure successful static page generation.
