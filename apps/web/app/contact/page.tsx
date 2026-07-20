@@ -33,12 +33,23 @@ function ContactForm() {
 
   useEffect(() => {
     const serviceParam = searchParams.get('service');
+    const calculatorParam = searchParams.get('calculator');
+    const estimateParam = searchParams.get('estimate');
+
     if (serviceParam) {
       const match = servicesMap.find((s) => s.slug === serviceParam);
       if (match) {
         setFormData((prev) => ({ ...prev, serviceInterest: match.slug }));
         setIsLocked(true);
       }
+    } else if (calculatorParam) {
+      // Calculators are part of Income Tax Services
+      setFormData((prev) => ({
+        ...prev,
+        serviceInterest: 'income-tax',
+        message: `Hello, I used the ${calculatorParam} calculator and got a monthly estimate of ${estimateParam || 'N/A'}. I would like to get an exact tax calculation from your consultants.`,
+      }));
+      setIsLocked(true);
     }
   }, [searchParams]);
 

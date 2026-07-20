@@ -4,7 +4,7 @@ This document tracks the current state of the project, features implemented, dec
 
 ## Project Status Overview
 - **Repository Remote:** `https://github.com/abdulah-0/consultax.git`
-- **Current Phase:** Phase 4 (Tax Calculators) — In Progress
+- **Current Phase:** Phase 5 (Admin Dashboard — Authentication & Core Views) — In Progress
 - **Last Updated:** 20 July 2026
 
 ---
@@ -35,3 +35,9 @@ This document tracks the current state of the project, features implemented, dec
 - **Action:** Wired service card CTA actions to pre-fill the contact form dropdown via URL query parameters.
 - **Action:** Developed a success checkmark and WhatsApp redirect confirmation panel after submitting a lead.
 - **Action:** Wrapped parameter readers in a Suspense boundary to ensure successful static page generation.
+- **Action:** Defined modular FBR slab rate models and generic tax math engines in `apps/web/lib/calculators/rates.ts`.
+- **Action:** Developed formulas for 4 calculators: Salary, Business, Rental (Individual), and Rental (Company).
+- **Action:** Implemented a currency formatting utility `formatPKR` support for comma separation and custom decimal points.
+- **Action:** Created a custom boundary test runner `run-tests.ts` and executed it successfully.
+- **Action:** Developed the tabbed interactive Tax Calculators Page (`/calculators`).
+- **Action:** Linked the calculator CTAs to pass calculated monthly estimates to the contact page form.
