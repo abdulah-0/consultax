@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import JsonLd from '../components/JsonLd';
 
 export default function Home() {
   const trustItems = [
@@ -73,6 +74,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full">
+      <JsonLd />
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden bg-navy-dark py-24 sm:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(31,43,122,0.15),transparent)] pointer-events-none" />
