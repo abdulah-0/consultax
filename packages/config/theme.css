@@ -1,0 +1,13 @@
+@theme {
+  --color-navy: #1F2B7A;        /* primary brand — header, nav, primary buttons, links */
+  --color-navy-dark: #141C52;   /* footer bg, dark sections, hero overlays */
+  --color-orange: #E8622C;      /* accent CTA only — "Request a Consultation", hover states */
+  --color-charcoal: #414042;    /* body copy, form labels */
+  --color-cloud: #F4F5FA;       /* section backgrounds, card fills */
+  --color-success: #2E7D32;     /* form success state */
+  --color-error: #C0392B;       /* form validation errors */
+  --color-rule: #D9DBE9;        /* borders/dividers */
+
+  --font-heading: 'Poppins', 'Montserrat', sans-serif;
+  --font-body: 'Inter', 'Source Sans Pro', sans-serif;
+}

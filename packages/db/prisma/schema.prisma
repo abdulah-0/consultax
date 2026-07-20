@@ -1,0 +1,78 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Lead {
+  id              String      @id @default(cuid())
+  fullName        String
+  phone           String
+  email           String
+  serviceInterest String?   // one of the ServiceCategory slugs, or "General Inquiry"
+  message         String?
+  sourcePage      String      // e.g. "Home", "Services — Income Tax", "Contact", "Calculator — Salary Tax"
+  status          LeadStatus  @default(NEW)
+  assignedToId    String?
+  assignedTo      User?       @relation(fields: [assignedToId], references: [id])
+  notes           LeadNote[]
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  IN_PROGRESS
+  CONVERTED
+  CLOSED
+  NOT_INTERESTED
+}
+
+model LeadNote {
+  id        String   @id @default(cuid())
+  leadId    String
+  lead      Lead     @relation(fields: [leadId], references: [id])
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  body      String
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id        String     @id @default(cuid())
+  name      String
+  email     String     @unique
+  password  String     // hashed
+  role      UserRole   @default(CONSULTANT)
+  leads     Lead[]
+  notes     LeadNote[]
+  createdAt DateTime   @default(now())
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  CONSULTANT
+  FRONT_DESK
+}
+
+model ServiceCategory {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String?
+  order       Int      @default(0)
+  subServices SubService[]
+  active      Boolean  @default(true)
+}
+
+model SubService {
+  id                String          @id @default(cuid())
+  categoryId        String
+  category          ServiceCategory @relation(fields: [categoryId], references: [id])
+  name              String
+  order             Int             @default(0)
+}
