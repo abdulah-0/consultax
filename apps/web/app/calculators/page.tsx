@@ -58,7 +58,7 @@ export default function Calculators() {
             FBR Tax Calculators
           </h1>
           <p className="mt-4 text-lg text-charcoal/80 font-body">
-            Estimate your tax liability instantly using our calculators configured with current Federal Board of Revenue (FBR) tax rates.
+            Estimate your tax liability instantly using our calculators configured with current Federal Board of Revenue (FBR) tax rates (FY 2026-27).
           </p>
         </div>
 

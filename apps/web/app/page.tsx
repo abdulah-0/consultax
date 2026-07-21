@@ -43,7 +43,7 @@ export default function Home() {
     {
       title: 'SECP Compliance',
       slug: 'secp-compliance',
-      desc: 'New company incorporations, statutory annual filings, SECP returns, and secretarial compliance services.',
+      desc: 'Company Incorporation, statutory annual filings, SECP returns, and other corporate services.',
       icon: (
         <svg className="h-6 w-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -53,7 +53,7 @@ export default function Home() {
     {
       title: 'Management Accounting',
       slug: 'management-accounting',
-      desc: 'Computerized bookkeeping, generation of financial statements, reporting, and business performance analysis.',
+      desc: 'Computerized bookkeeping, preparation of financial statements, reporting, and business performance analysis.',
       icon: (
         <svg className="h-6 w-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
