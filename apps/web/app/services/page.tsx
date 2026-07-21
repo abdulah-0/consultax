@@ -67,7 +67,6 @@ export default function Services() {
       description: null,
       subServices: [
         'PSEB Registration',
-        'Website Development / Android Apps Development',
       ],
     },
   ];

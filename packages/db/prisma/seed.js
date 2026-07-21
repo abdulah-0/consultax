@@ -108,7 +108,6 @@ async function main() {
       order: 7,
       subServices: [
         'PSEB Registration',
-        'Website Development / Android Apps Development',
       ],
     },
   ];
