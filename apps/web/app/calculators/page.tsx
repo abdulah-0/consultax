@@ -65,10 +65,10 @@ export default function Calculators() {
         {/* Tab Buttons */}
         <div className="flex flex-wrap justify-center border-b border-rule mb-12 gap-2">
           {[
-            { id: 'salary', name: 'Salary Tax' },
-            { id: 'business', name: 'Non-Salary (Business) Tax' },
-            { id: 'rental-ind', name: 'Rental Tax (Individual)' },
-            { id: 'rental-comp', name: 'Rental Tax (Company)' },
+            { id: 'salary', name: 'Tax on Salary Income' },
+            { id: 'business', name: 'Tax on Non-Salary (Business Income)' },
+            { id: 'rental-ind', name: 'Tax on Rental Income' },
+            { id: 'rental-comp', name: 'Tax on Rental Income (Company)' },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -92,16 +92,6 @@ export default function Calculators() {
               <div className="md:col-span-6 space-y-6">
                 <h3 className="text-xl font-bold text-navy font-heading">Salaried Tax Parameters</h3>
                 <div>
-                  <label className="block text-sm font-semibold text-charcoal mb-2 font-body">Monthly Gross Pay (PKR)</label>
-                  <input
-                    type="number"
-                    value={salaryInputs.monthlyGrossPay}
-                    onChange={(e) => setSalaryInputs({ ...salaryInputs, monthlyGrossPay: e.target.value })}
-                    placeholder="e.g. 150000"
-                    className="w-full rounded-md border border-rule px-4 py-3 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm font-body"
-                  />
-                </div>
-                <div>
                   <label className="block text-sm font-semibold text-charcoal mb-2 font-body">Monthly Basic Pay (PKR)</label>
                   <input
                     type="number"
@@ -118,6 +108,16 @@ export default function Calculators() {
                     value={salaryInputs.monthlyMedicalAllowance}
                     onChange={(e) => setSalaryInputs({ ...salaryInputs, monthlyMedicalAllowance: e.target.value })}
                     placeholder="e.g. 6000"
+                    className="w-full rounded-md border border-rule px-4 py-3 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm font-body"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-charcoal mb-2 font-body">Monthly Gross Pay (PKR)</label>
+                  <input
+                    type="number"
+                    value={salaryInputs.monthlyGrossPay}
+                    onChange={(e) => setSalaryInputs({ ...salaryInputs, monthlyGrossPay: e.target.value })}
+                    placeholder="e.g. 150000"
                     className="w-full rounded-md border border-rule px-4 py-3 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm font-body"
                   />
                 </div>
