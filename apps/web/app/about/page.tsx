@@ -1,34 +1,5 @@
+import React from 'react';
 import Link from 'next/link';
-
-// Fallback-safe Team Member sub-component
-function TeamMemberList({ members }: { members: any[] }) {
-  if (!members || members.length === 0) {
-    // Return empty state or null to keep layout clean and avoid deploy blocks
-    return (
-      <div className="text-center py-8 bg-cloud rounded-xl border border-dashed border-rule p-6">
-        <p className="text-charcoal/60 text-sm">
-          Our team profiles are currently being finalized. Check back soon, or connect with our lead consultants directly.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-      {members.map((member, index) => (
-        <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-rule">
-          <div className="h-48 w-full bg-cloud rounded-lg mb-4 flex items-center justify-center text-charcoal/40">
-            {/* Image Placeholder */}
-            <span className="text-xs">Profile Image Placeholder</span>
-          </div>
-          <h4 className="text-lg font-bold text-navy font-heading">{member.name}</h4>
-          <p className="text-sm text-orange font-semibold">{member.role}</p>
-          <p className="text-xs text-charcoal/80 mt-2">{member.bio}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default function About() {
   const whyChooseUs = [
@@ -40,8 +11,28 @@ export default function About() {
     'Personalized Client Support',
   ];
 
-  // Placeholder for Team Members, shipped empty for safety
-  const teamMembers: any[] = [];
+  const serviceApproach = [
+    {
+      step: '01',
+      title: 'Analyzing',
+      desc: "We begin by thoroughly assessing client's requirements, objectives, and current situation to identify opportunities, challenges, and the most effective course of action."
+    },
+    {
+      step: '02',
+      title: 'Developing',
+      desc: 'Based on our analysis, we develop a customized strategy and practical solutions tailored to your specific business and compliance needs.'
+    },
+    {
+      step: '03',
+      title: 'Execution',
+      desc: 'Our team implements the approved plan efficiently, ensuring every task is completed accurately, on time, and in accordance with applicable laws and regulations.'
+    },
+    {
+      step: '04',
+      title: 'Monitoring',
+      desc: 'We continuously monitor progress, evaluate outcomes, and provide ongoing support to ensure sustained compliance, improved performance, and timely adjustments whenever required.'
+    }
+  ];
 
   return (
     <div className="py-16 sm:py-24 bg-cloud">
@@ -87,12 +78,22 @@ export default function About() {
           </div>
         </div>
 
-        {/* Section 3: Our Team Credentials */}
+        {/* Section 3: Our Service Approach */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold font-heading text-navy mb-6">
-            Our Professionals
+          <h2 className="text-2xl font-bold font-heading text-navy mb-8 text-center sm:text-left">
+            OUR SERVICE APPROACH
           </h2>
-          <TeamMemberList members={teamMembers} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            {serviceApproach.map((item, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-rule/50 flex flex-col justify-between space-y-4 hover:border-orange hover:shadow-md transition-all duration-300">
+                <div className="space-y-3">
+                  <span className="text-3xl font-extrabold text-orange/30 font-body">{item.step}</span>
+                  <h4 className="text-lg font-bold text-navy font-heading">{item.title}</h4>
+                  <p className="text-sm text-charcoal/80 leading-relaxed font-body">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA Block */}
