@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -85,7 +86,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Sidebar */}
       <aside className="hidden md:flex md:w-64 md:flex-col bg-navy-dark text-white">
         <div className="flex h-20 items-center px-6 border-b border-white/10">
-          <span className="text-xl font-bold font-heading">CONSULTax Admin</span>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="CONSULTax Logo"
+              width={140}
+              height={40}
+              className="h-9 w-auto object-contain brightness-0 invert"
+              priority
+            />
+            <span className="text-[10px] font-bold text-white/50 tracking-wider uppercase border-l border-white/20 pl-2">Admin</span>
+          </div>
         </div>
         <nav className="flex-1 space-y-1 px-4 py-6 overflow-y-auto">
           {sidebarLinks.map((link) => {

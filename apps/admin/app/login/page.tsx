@@ -44,9 +44,9 @@ export default function Login() {
         <Image
           src="/logo.png"
           alt="CONSULTax Associates Logo"
-          width={180}
-          height={56}
-          className="mx-auto h-12 w-auto object-contain"
+          width={240}
+          height={75}
+          className="mx-auto h-16 w-auto object-contain"
           priority
         />
         <h2 className="mt-6 text-center text-3xl font-extrabold text-navy font-heading">

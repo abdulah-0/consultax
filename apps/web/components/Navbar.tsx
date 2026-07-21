@@ -26,11 +26,14 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="CONSULTax Associates Logo"
-                width={180}
-                height={56}
-                className="h-12 w-auto object-contain"
+                width={200}
+                height={62}
+                className="h-14 w-auto object-contain"
                 priority
               />
+              <span className="hidden lg:inline text-sm italic font-medium text-charcoal/60 border-l border-rule pl-3 font-body">
+                We take care of your taxes
+              </span>
             </Link>
           </div>
           
