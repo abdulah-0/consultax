@@ -338,6 +338,50 @@ function ContactForm() {
             </a>
           </div>
         </div>
+
+        <div className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
+          <h3 className="text-xl font-bold text-navy font-heading mb-4">Important Links</h3>
+          <p className="text-sm text-charcoal/80 mb-6 font-body">Quick access to official Federal Board of Revenue (FBR) portals.</p>
+          <div className="space-y-3 font-body text-sm">
+            <a href="https://iris.fbr.gov.pk/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-navy hover:text-orange transition-colors">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Online Verifications
+            </a>
+            <a href="https://fbr.gov.pk/ShowSROs?Department=Income%20Tax" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-navy hover:text-orange transition-colors">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Income Tax SROs
+            </a>
+            <a href="https://fbr.gov.pk/ShowSROs?Department=Sales%20Tax" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-navy hover:text-orange transition-colors">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Sales Tax SROs
+            </a>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
+          <h3 className="text-xl font-bold text-navy font-heading mb-4">Community Services</h3>
+          <p className="text-sm text-charcoal/80 mb-6 font-body">Support local community relief organizations and charity funds.</p>
+          <div className="space-y-3 font-body text-sm">
+            <a href="https://apps.shaukatkhanum.org.pk:2087/online/donationportalHBL/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-navy hover:text-orange transition-colors">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              Support Cancer Patients
+            </a>
+            <a href="https://www.edhi.org/donation/pay" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-navy hover:text-orange transition-colors">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              Support Orphans
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
