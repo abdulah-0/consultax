@@ -339,7 +339,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
+        <div id="important-links" className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
           <h3 className="text-xl font-bold text-navy font-heading mb-4">Important Links</h3>
           <p className="text-sm text-charcoal/80 mb-6 font-body">Quick access to official Federal Board of Revenue (FBR) portals.</p>
           <div className="space-y-3 font-body text-sm">
@@ -364,7 +364,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
+        <div id="community-service" className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
           <h3 className="text-xl font-bold text-navy font-heading mb-4">Community Services</h3>
           <p className="text-sm text-charcoal/80 mb-6 font-body">Support local community relief organizations and charity funds.</p>
           <div className="space-y-3 font-body text-sm">

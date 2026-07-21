@@ -41,6 +41,12 @@ export default function Footer() {
               <Link href="/contact" className="text-sm text-white/70 hover:text-white transition-colors">
                 Contact Us
               </Link>
+              <Link href="/contact#important-links" className="text-sm text-white/70 hover:text-white transition-colors">
+                Important Links
+              </Link>
+              <Link href="/contact#community-service" className="text-sm text-white/70 hover:text-white transition-colors">
+                Community Service
+              </Link>
             </div>
           </div>
 
