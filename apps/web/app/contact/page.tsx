@@ -53,6 +53,25 @@ function ContactForm() {
     }
   }, [searchParams]);
 
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const id = hash.replace('#', '');
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 150);
+      }
+    };
+
+    handleHashScroll();
+    window.addEventListener('hashchange', handleHashScroll);
+    return () => window.removeEventListener('hashchange', handleHashScroll);
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -339,7 +358,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <div id="important-links" className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
+        <div id="important-links" className="scroll-mt-24 bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
           <h3 className="text-xl font-bold text-navy font-heading mb-4">Important Links</h3>
           <p className="text-sm text-charcoal/80 mb-6 font-body">Quick access to official Federal Board of Revenue (FBR) portals.</p>
           <div className="space-y-3 font-body text-sm">
@@ -364,7 +383,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <div id="community-service" className="bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
+        <div id="community-service" className="scroll-mt-24 bg-white rounded-3xl p-8 shadow-sm border border-rule/50">
           <h3 className="text-xl font-bold text-navy font-heading mb-4">Community Services</h3>
           <p className="text-sm text-charcoal/80 mb-6 font-body">Support local community relief organizations and charity funds.</p>
           <div className="space-y-3 font-body text-sm">
