@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://consultax.com/sitemap.xml
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://consultaxpk.com/sitemap.xml

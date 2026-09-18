@@ -20,6 +20,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "CONSULTax Associates | Professional Tax & Compliance Services",
   description: "CONSULTax Associates is a professional tax consultancy, management accounting, and corporate compliance firm providing reliable, practical, and result-oriented financial solutions.",
+  other: {
+    "google-adsense-account": "ca-pub-5375106983698830",
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +35,14 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-5375106983698830" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5375106983698830"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-cloud text-charcoal">
         <Navbar />
         <main className="flex-grow">{children}</main>
